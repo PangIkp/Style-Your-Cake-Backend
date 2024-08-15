@@ -6,15 +6,26 @@ const ProductSchema = new mongoose.Schema({
     required: true,
     maxlength: [40, "Product Name can not be more than 40 characters"],
   },
+
+  id: {
+    type: String,
+    required: true,
+  },
+
   price: {
     type: Number,
     required: true,
   },
-  detail: {
+
+  category: {
     type: String,
     required: true,
-    maxlength: [100, "Detail can not be more than 100 characters"],
   },
+  // detail: {
+  //   type: String,
+  //   required: true,
+  //   maxlength: [100, "Detail can not be more than 100 characters"],
+  // },
   productPic: {
     type: String,
     required: true,
