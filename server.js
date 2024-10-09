@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const products = require("./routes/products");
 const authRoutes = require('./routes/auth');
+const resetPasswordRoutes = require("./routes/resetpassword");
 const cors = require('cors');
 
 // Load env vars
@@ -18,6 +19,7 @@ app.use(express.json());
 // Product and Auth Routes
 app.use("/api/v1/products", products);
 app.use("/api/v1/auth", authRoutes);
+
 
 // Start the server
 const PORT = process.env.PORT || 3001;
